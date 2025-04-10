@@ -1,8 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { default: mongoose } = require("mongoose");
-const bankRoutes = require("./routes/BankRoute")
-const accountRoute = require("./routes/AccountRoute")
+const bankRoutes = require("./routes/BankRoute");
+const accountRoute = require("./routes/AccountRoute");
+const userRoute = require("./routes/UserRoute");
 
 //defining express
 
@@ -12,8 +13,9 @@ const server = express();
 server.use(bodyParser.json());
 
 //routes
-server.use(bankRoutes)
-server.use(accountRoute)
+server.use(bankRoutes);
+server.use(accountRoute);
+server.use(userRoute);
 
 //mongoose connection
 mongoose
